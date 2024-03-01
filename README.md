@@ -1,3 +1,2 @@
-<!-- Screenshot  -->
+<!-- Screenshot -->
 ![Screenshot](./Screenshot.png)
-<!-- Screenshot  -->
