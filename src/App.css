@@ -1,6 +1,6 @@
 h4 {
   text-align: center;
-  margin-block: 40px 0px;
+  margin-block: 10px 5px;
 }
 
 .table {
@@ -8,6 +8,7 @@ h4 {
   width: fit-content;
   text-align: center;
   margin-inline: auto;
+  margin-bottom: 20px;
   border: 1px solid black;
 }
 

@@ -55,6 +55,7 @@ function getTablesData() {
 
   // Calculate statistics for flavanoidsData
   flavanoidsData.forEach((wine: any) => {
+    console.log(wine.counts)
     wine.mean = useMeanCalculator(wine.flavanoids);
     wine.median = useMedianCalculator(wine.flavanoids);
     wine.mode = useModeCalculator(wine.counts);
@@ -62,6 +63,7 @@ function getTablesData() {
 
   // Calculate statistics for gammaData
   gammaData.forEach((wine: any) => {
+    console.log(wine.counts)
     wine.mean = useMeanCalculator(wine.gamma);
     wine.median = useMedianCalculator(wine.gamma);
     wine.mode = useModeCalculator(wine.counts);
@@ -82,10 +84,12 @@ function App() {
   }, []);
 
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
-      <Table title={"Table 1"} data={tablesData.flavanoidsData} />
-      <Table title={"Table 2"} data={tablesData.gammaData} />
-    </div>
+    tablesData.flavanoidsData.length && tablesData.gammaData.length && (
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <Table title={"Table 1"} data={tablesData.flavanoidsData} />
+        <Table title={"Table 2"} data={tablesData.gammaData} />
+      </div>
+    )
   );
 }
 

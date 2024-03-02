@@ -26,7 +26,7 @@ const Table: React.FC<TableProps> = ({ title, data }) => {
               <div className="cell bold">Class {item.alcohol}</div>
               <div className="cell">{item.mean}</div>
               <div className="cell">{item.median}</div>
-              <div className="cell">{item.mode}</div>
+              <div className="cell">{ item.mode }</div>
             </div>
           ))}
       </div>
